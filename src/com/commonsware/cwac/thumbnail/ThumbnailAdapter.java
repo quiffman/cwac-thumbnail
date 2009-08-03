@@ -66,8 +66,14 @@ public class ThumbnailAdapter extends AdapterWrapper {
 											ViewGroup parent) {
 		View result=super.getView(position, convertView, parent);
 		
+		processView(result);
+		
+		return(result);
+	}
+	
+	public void processView(View row) {
 		for (int imageId : imageIds) {
-			ImageView image=(ImageView)result.findViewById(imageId);
+			ImageView image=(ImageView)row.findViewById(imageId);
 			
 			if (image!=null && image.getTag()!=null) {
 				ThumbnailMessage msg=cache
@@ -85,8 +91,6 @@ public class ThumbnailAdapter extends AdapterWrapper {
 				}
 			}
 		}
-		
-		return(result);
 	}
 	
 	private String getBusKey() {
@@ -100,7 +104,10 @@ public class ThumbnailAdapter extends AdapterWrapper {
 			
 			host.runOnUiThread(new Runnable() {
 				public void run() {
-					image.setImageDrawable(cache.get(message.getUrl()));
+					if (image.getTag()!=null &&
+							image.getTag().toString().equals(message.getUrl())) {
+						image.setImageDrawable(cache.get(message.getUrl()));
+					}
 				}
 			});
 		}
