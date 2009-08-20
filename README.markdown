@@ -26,7 +26,8 @@ tuned!
 Dependencies
 ------------
 This project requires the [CWAC Task module][task], the
-[CWAC Bus module][bus], and the [CWAC Cache module][task].
+[CWAC Bus module][bus], [CWAC AdapterWrapper][adapter],
+and the [CWAC Cache module][task].
 A copy of compatible JARs can be found in the `libs/` directory
 of the project, though you are welcome to try newer ones, or
 ones that you have patched yourself.
@@ -61,3 +62,4 @@ indicate which CWAC module you have questions about.
 [task]: http://github.com/commonsguy/cwac-task/tree/master
 [bus]: http://github.com/commonsguy/cwac-bus/tree/master
 [cache]: http://github.com/commonsguy/cwac-cache/tree/master
+[adapter]: http://github.com/commonsguy/cwac-adapter/tree/master
