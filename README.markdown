@@ -13,7 +13,7 @@ Unless you use `ThumbnailAdapter`.
 
 `ThumbnailAdapter` handles all of that mess for you. All you
 need to do is wrap your regular `ListAdapter` in a `ThumbnailAdapter`,
-supplying a `SimpleWebImageCache` (from the [CWAC Cache module][task])
+supplying a `SimpleWebImageCache` (from the [CWAC Cache module][cache])
 and the IDs of the `ImageView`s in each row. Then, when you bind
 your rows, tuck the URL for the image into the `ImageView` itself
 via `setTag()`. `ThumbnailAdapter` handles the rest.
@@ -27,7 +27,7 @@ Dependencies
 ------------
 This project requires the [CWAC Task module][task], the
 [CWAC Bus module][bus], [CWAC AdapterWrapper][adapter],
-and the [CWAC Cache module][task].
+and the [CWAC Cache module][cache].
 A copy of compatible JARs can be found in the `libs/` directory
 of the project, though you are welcome to try newer ones, or
 ones that you have patched yourself.
