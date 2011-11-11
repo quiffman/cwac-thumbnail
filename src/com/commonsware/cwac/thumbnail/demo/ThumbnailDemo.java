@@ -74,6 +74,7 @@ public class ThumbnailDemo extends ListActivity {
 			
 			if (user!=null && password!=null) {
 				client=new Twitter(user, password);
+				client.setAPIRootUrl("http://yamba.marakana.com/api");
 				
 				for (Twitter.Status s :client.getFriendsTimeline()) {
 					model.add(new TimelineEntry(s.user.screenName,
